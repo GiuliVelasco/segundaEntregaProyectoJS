@@ -59,17 +59,29 @@
                     </fieldset>
                 </form>
                 <div class="col-3">
-                    <button id="botonDarkMode" class="btn btn-dark">Modo oscuro</button>
-                    <button id="botonLightMode" class="btn btn-light">Modo claro....</button>
+                    <button id="botonDarkMode" class="btn btn-dark">Modo dark</button>
+                    <button id="botonLightMode" class="btn btn-light">Modo light</button>
                 </div>
             </div>
         </div>
-
-        <div>
-            <a href="" role="buttom" id="botonVerCarrito">
+        <!-- Carrito con offcanvas -->
+        <section>
+            <br>
+            <a href="" role="buttom" id="botonVerCarrito" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="img/iconCarrito.png" width="60px" height="60px" alt="Ver carrito de compras">
+                <P>VER CARRITO</P>
             </a>
-        </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Carrito</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="idCarrito">
+                </div>
+            </div>
+        </section>
+        <br>
+        <!-- Seccion productos -->
         <div class="container-fluid">
             <section class="container-fluid d-flex flex-row flex-wrap justify-content-center">
                 <div class="container-fluid d-flex flex-row flex-wrap justify-content-center" id="divProductos"></div>

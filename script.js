@@ -186,3 +186,23 @@ boton6.addEventListener('click', ()=>{
 
     localStorage.setItem('carrito', JSON.stringify(arrayCarrito));
 })
+
+//ver carrito
+let botonVerCarrito = document.getElementById('botonVerCarrito');
+
+botonVerCarrito.addEventListener('click', (event)=>{
+    event.preventDefault()
+    idCarrito.innerHTML += `<p>Productos seleccionados</p>`
+    arrayCarrito.forEach(arrayCarrito => {
+        idCarrito.innerHTML += `
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">${arrayCarrito.nombre.toUpperCase()}</p>
+                <p class="card-text">Color: ${arrayCarrito.color}.<br>Talle: ${arrayCarrito.talle}
+                <br><span class="precio">US$ ${arrayCarrito.precio}</span> - Cantidad: ${arrayCarrito.cantComprada}</p>
+                <p>Subtotal: U$D ${arrayCarrito.precio * arrayCarrito.cantComprada}</p>
+            </div>
+        </div>
+    `
+    })
+})
